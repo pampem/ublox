@@ -100,16 +100,10 @@ getcap /usr/local/sbin/settime_utc
 date -u
 ```
 
-### First Terminal
+### Launch
 
 ```bash
-ros2 launch ublox_gps ublox_gps_node-composed-launch.py 
-```
-
-### Second Terminal
-
-```bash
-ros2 run ublox_gps gps_time_setter
+ros2 launch ublox_gps gnss_with_time_setter.launch.py
 ```
 
 ### Confirmation
