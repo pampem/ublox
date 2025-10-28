@@ -88,6 +88,13 @@ target_link_libraries(ublox_logger PRIVATE
   ublox_gps
 )
 
+add_executable(gps_time_setter src/gps_time_setter.cpp)
+ament_target_dependencies(gps_time_setter rclcpp ublox_msgs)
+
+install(TARGETS gps_time_setter
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 install(TARGETS
   ublox_gps_node ublox_logger
   DESTINATION lib/${PROJECT_NAME}

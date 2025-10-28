@@ -47,7 +47,7 @@ def generate_launch_description():
     config_directory = os.path.join(
         ament_index_python.packages.get_package_share_directory('ublox_gps'),
         'config')
-    param_config = os.path.join(config_directory, 'c94_m8p_rover.yaml')
+    param_config = os.path.join(config_directory, 'zed_f9p.yaml')
     with open(param_config, 'r') as f:
         params = yaml.safe_load(f)['ublox_gps_node']['ros__parameters']
     container = ComposableNodeContainer(
